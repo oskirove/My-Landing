@@ -1,0 +1,44 @@
+---
+import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { Button } from "@/components/ui/button";
+import logo from "@/assets/foto.jpg";
+import ChatBuble from "@/components/icons/chat-bubble";
+import { CodeIcon } from "lucide-react";
+---
+
+<header id="main-header" class="w-full backdrop-blur-2xl sticky top-0 z-50 bg-[#FEF7EE]/50 dark:bg-[#282524]/50 transition-shadow duration-300 ease-in-out">
+    <nav class="flex items-center max-w-8xl mx-auto p-8 justify-between">
+        <a href="/" class="text-2xl font-semibold flex items-center gap-2">
+            <img
+                src={logo.src}
+                alt="oskirove logo"
+                class="h-14 w-auto rounded-xl"
+            />
+            oskirove
+        </a>
+        <div class="flex items-center gap-2">
+            <Button variant="ghost">
+                <CodeIcon size={12} strokeWidth={2} absoluteStrokeWidth /> Proyectos
+            </Button>
+            <AnimatedThemeToggler client:load />
+            <a href="/contact">
+                <Button variant="default">
+                    <ChatBuble className="scale-x-[-1]" />Contáctame
+                </Button>
+            </a>
+        </div>
+    </nav>
+</header>
+
+<script>
+    const header = document.getElementById("main-header")
+
+    window.addEventListener("scroll", () => {
+        if (!header) return;
+        if (window.scrollY > 0) {
+            header.classList.add("shadow-xl")
+        } else {
+            header.classList.remove("shadow-xl")
+        }
+    })
+</script>

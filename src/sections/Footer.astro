@@ -1,0 +1,44 @@
+---
+import { GithubIcon } from "@/components/icons/github";
+import { InstagramIcon } from "@/components/icons/instagram";
+import { LinkedinIcon } from "@/components/icons/linkedin";
+import { Button } from "@/components/ui/button";
+
+const socials = [
+    {
+        name: "Instagram",
+        href: "https://instagram.com/oski_rv",
+        icon: InstagramIcon,
+    },
+    {
+        name: "Github",
+        href: "https://github.com/oskirove",
+        icon: GithubIcon,
+    },
+    {
+        name: "Linkedin",
+        href: "https://www.linkedin.com/in/%C3%B3scar-rodr%C3%ADguez-3b6aa136a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+        icon: LinkedinIcon,
+    },
+]
+---
+
+<footer class="flex flex-col space-y-6">
+    <div class="flex items-center justify-center gap-4">
+        {socials.map((social) => (
+            <a href={social.href} target="_blank" rel="noopener noreferrer">
+                <Button variant="secondary" size="icon-lg" aria-label={social.name}>
+                    <social.icon size={20} />
+                </Button>
+            </a>
+        ))}
+    </div>
+    <div class="hidden sm:relative sm:block overflow-hidden h-[220px]">
+        <div
+            class="absolute inset-x-0 bottom-[-4rem] text-center font-extrabold leading-none select-none bg-gradient-to-b from-primary/10 to-transparent text-transparent bg-clip-text transform -translate-y-[6%]"
+            style="font-size: clamp(8rem, 20vw, 18rem);"
+        >
+            oskirove
+        </div>
+    </div>
+</footer>
