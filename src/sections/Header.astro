@@ -6,7 +6,10 @@ import ChatBuble from "@/components/icons/chat-bubble";
 import { CodeIcon } from "lucide-react";
 ---
 
-<header id="main-header" class="w-full backdrop-blur-2xl sticky top-0 z-50 bg-[#FEF7EE]/50 dark:bg-[#282524]/50 transition-shadow duration-300 ease-in-out">
+<header
+    id="main-header"
+    class="w-full backdrop-blur-2xl sticky top-0 z-50 bg-[#FEF7EE]/50 dark:bg-[#282524]/50 transition-shadow duration-300 shadow-primary/10 dark:shadow-[#161514]/40 ease-in-out"
+>
     <nav class="flex items-center max-w-8xl mx-auto p-8 justify-between">
         <a href="/" class="text-2xl font-semibold flex items-center gap-2">
             <img
@@ -17,9 +20,12 @@ import { CodeIcon } from "lucide-react";
             oskirove
         </a>
         <div class="flex items-center gap-2">
-            <Button variant="ghost">
-                <CodeIcon size={12} strokeWidth={2} absoluteStrokeWidth /> Proyectos
-            </Button>
+            <a href="#proyects">
+                <Button variant="ghost">
+                    <CodeIcon size={12} strokeWidth={2} absoluteStrokeWidth /> Proyectos
+                </Button>
+            </a>
+
             <AnimatedThemeToggler client:load />
             <a href="/contact">
                 <Button variant="default">
@@ -31,14 +37,14 @@ import { CodeIcon } from "lucide-react";
 </header>
 
 <script>
-    const header = document.getElementById("main-header")
+    const header = document.getElementById("main-header");
 
     window.addEventListener("scroll", () => {
         if (!header) return;
         if (window.scrollY > 0) {
-            header.classList.add("shadow-xl")
+            header.classList.add("shadow-xl");
         } else {
-            header.classList.remove("shadow-xl")
+            header.classList.remove("shadow-xl");
         }
-    })
+    });
 </script>

@@ -1,20 +1,25 @@
-<section class="my-28 w-full h-min-screen">
-    <div class="flex flex-col max-w-7xl text-center mx-auto space-y-6 px-6 py-12">
-        <h2 class="text-4xl font-bold tracking-tight sm:text-6xl">
-            Un poquito sobre mi
-        </h2>
+---
+import AboutMe from "@/components/AboutMe";
+import AboutMe2 from "@/components/AboutMe2";
+import FinAboutMe from "@/components/FinAboutMe";
+import IntroAboutMe from "@/components/IntroAboutMe";
+---
 
-        <p class="text-xl">
-            No soy diseñador, pero me obsesiona la apariencia de las cosas. Soy
-            desarrollador web y estudiante de DAM, con la cabeza metida en todo
-            lo que tenga que ver con SaaS, frontends limpios y código que se
-            sienta bien de leer. Me gusta entender cómo funcionan las
-            tecnologías por dentro y construir proyectos que no solo se vean
-            bien, sino que también tengan sentido. Paso gran parte del tiempo
-            aprendiendo nuevas herramientas, experimentando con ideas y puliendo
-            cada detalle visual hasta que el resultado encaja. Mi objetivo:
-            crear experiencias digitales que transmitan tanto como un buen
-            diseño, pero nacidas desde la lógica del desarrollo.
-        </p>
+<section class="my-28 w-full h-min-screen">
+    <div
+        class="flex flex-col max-w-7xl text-center mx-auto space-y-6 px-6 py-12"
+    >
+        <IntroAboutMe client:load />
+    </div>
+    <AboutMe client:load />
+    <div
+        class="flex flex-col max-w-7xl text-center mx-auto space-y-6 px-6 py-12"
+    >
+        <AboutMe2 client:load />
+    </div>
+    <div
+        class="flex flex-col max-w-7xl text-center mx-auto space-y-6 px-6 py-12"
+    >
+        <FinAboutMe client:load />
     </div>
 </section>
