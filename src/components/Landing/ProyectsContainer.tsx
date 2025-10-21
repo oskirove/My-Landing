@@ -5,17 +5,31 @@ import ProyectCard from "./ProyectCard"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import bgImage from "@/assets/img.png";
+import { AstroIconDark } from "../ui/svgs/astroIconDark"
+import { ReactDark } from "../ui/svgs/reactDark"
+import { Tailwindcss } from "../ui/svgs/tailwindcss"
+import { Supabase } from "../ui/svgs/supabase"
+import { ClerkIconDark } from "../ui/svgs/clerkIconDark"
+import { ShadcnUiDark } from "../ui/svgs/shadcnUiDark"
+import { GsapLogoDark } from "../ui/svgs/gsapLogoDark"
+import { NextjsIconDark } from "../ui/svgs/nextjsIconDark"
+import { Typescript } from "../ui/svgs/typescript"
 
 const proyects = [
     {
         title: "Musemy - Saas",
-        description: "Descripción para el proyecto que aparecera en la landing page de mi portfolio web",
-        img: "src/assets/musemy.png"
+        link: "https://www.musemy.com/",
+        description: "Una herramienta simple y estética para artistas que reúne sus enlaces, música y eventos, combinando diseño, funcionalidad y propósito.",
+        img: "src/assets/musemy.png",
+        techs: [NextjsIconDark, ReactDark, Typescript, ClerkIconDark, Supabase, Tailwindcss, ShadcnUiDark]
+
     },
     {
         title: "Mi landing - portfolio",
-        description: "Descripción para el proyecto que aparecera en la landing page de mi portfolio web",
-        img: "src/assets/portfolio.png"
+        link: "#",
+        description: "Mi portfolio personal, donde muestro mis proyectos, estilo y enfoque como desarrollador fullstack con animaciones y diseño cuidando cada detalle.",
+        img: "src/assets/portfolio.png",
+        techs: [AstroIconDark, ReactDark, Typescript, Tailwindcss, ShadcnUiDark, GsapLogoDark]
     }
 ]
 
@@ -74,10 +88,12 @@ export default function ProyectsContainer() {
                 <div className="relative z-10 grid items-center justify-between md:grid-cols-2 gap-6">
                     {proyects.map((proyect, index) => (
                         <ProyectCard
-                            key={index} 
+                            key={index}
                             title={proyect.title}
+                            link={proyect.link}
                             description={proyect.description}
                             img={proyect.img}
+                            techs={proyect.techs}
                         />
                     ))}
                 </div>

@@ -1,8 +1,7 @@
 ---
-import AboutMe from "@/components/AboutMe";
-import AboutMe2 from "@/components/AboutMe2";
-import FinAboutMe from "@/components/FinAboutMe";
-import IntroAboutMe from "@/components/IntroAboutMe";
+import AboutMe from "@/components/Landing/AboutMe";
+import AboutMe2 from "@/components/Landing/AboutMe2";
+import IntroAboutMe from "@/components/Landing/IntroAboutMe";
 ---
 
 <section class="my-28 w-full h-min-screen">
@@ -16,10 +15,5 @@ import IntroAboutMe from "@/components/IntroAboutMe";
         class="flex flex-col max-w-7xl text-center mx-auto space-y-6 px-6 py-12"
     >
         <AboutMe2 client:load />
-    </div>
-    <div
-        class="flex flex-col max-w-7xl text-center mx-auto space-y-6 px-6 py-12"
-    >
-        <FinAboutMe client:load />
     </div>
 </section>

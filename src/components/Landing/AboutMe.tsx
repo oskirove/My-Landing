@@ -65,7 +65,7 @@ export default function AboutMe() {
                 },
             });
 
-        }, divRefAbout);
+        }, textRefHorizontal);
 
         return () => ctx.revert();
         
