@@ -3,8 +3,8 @@ import { flushSync } from "react-dom"
 
 import { cn } from "@/lib/utils"
 import { Button } from "./button"
-import { MoonIcon } from "../icons/moon"
-import { SunIcon } from "../icons/sun"
+import { MoonIcon } from "./icons/moon"
+import { SunIcon } from "./icons/sun"
 
 interface AnimatedThemeTogglerProps
   extends React.ComponentPropsWithoutRef<"button"> {

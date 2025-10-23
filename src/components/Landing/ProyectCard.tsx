@@ -1,6 +1,5 @@
 import gsap from "gsap"
 import { useEffect, useRef } from "react";
-import { LinkIcon } from "../icons/link";
 import { LinkPreview } from "../ui/link-preview";
 
 interface ProyectCardProps {
@@ -42,7 +41,7 @@ export default function ProyectCard({ title, link, description, img, techs = [] 
             </div>
             <div className="space-y-2">
                 <LinkPreview url={link} className="flex items-center gap-2 text-[#e6ddd0] hover:text-[#e6ddd0]/70 transition-colors ease-in-out duration-300">
-                    <h3 className="font-bold text-2xl">{title}</h3> {/* <LinkIcon size={18} /> */}
+                    <h3 className="font-bold text-2xl">{title}</h3>
                 </LinkPreview>
                 <p className="font-medium text-[#FEF7EE]/70">{description}</p>
             </div>
